@@ -4,6 +4,8 @@ A FiveM ESX-compatible script that powers an interactive **Uwu Café** experienc
 
 ---
 
+preview: https://streamable.com/15jcrs
+
 ## 📦 Features
 
 - 🐾 **Cats** wander randomly and perform various idle animations (sleeping, stretching, walking).
