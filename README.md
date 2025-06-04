@@ -38,7 +38,7 @@ optional dependencies:
  `wasabi_oxshops` https://github.com/wasabirobby/wasabi_oxshops
 
  for billing:
- I used 
+ I used Jaksam's Billing UI: https://forum.cfx.re/t/billing-ui-esx-qbcore-bill-players-by-clicking-on-their-character/2715913
 
 ## ⚙️ Setup Instructions
 
