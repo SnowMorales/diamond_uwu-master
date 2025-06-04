@@ -68,3 +68,6 @@ Make sure stress relief is handled in your HUD system. Refer to your HUD documen
     🤲 Petting triggers synchronized animations for player and cat.
 
     🧘‍♂️ Reduces player stress during interaction for immersive RP.
+
+This is a script I made for my server
+This is a script I made for my server and I decided to share it with everyone. You are allowed to submit a pull request and make changes just don't distribute this without my permission.
