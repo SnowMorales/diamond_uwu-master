@@ -136,33 +136,10 @@ local function spawnCatAt(posIndex)
                 -- Relieve stress after petting
                 Wait(14000)
                 ClearPedTasks(playerPed)
-                TriggerServerEvent('hud:server:RelieveStress', 2)
+                TriggerServerEvent('hud:server:RelieveStress', 2) -- put your stress trigger here
             end
         }
     })
-
---[[    -- Cat wandering
-    -- Independent wandering and idle behavior per cat
-    CreateThread(function()
-        while DoesEntityExist(ped) do
-            local waitTime = math.random(10000, 20000) -- Each cat waits a random time before moving
-            Wait(waitTime)
-
-            -- Choose a random destination
-            local dest = catSpawnPoints[math.random(1, #catSpawnPoints)]
-            TaskGoStraightToCoord(ped, dest.x, dest.y, dest.z, 1.0, -1, 0.0, 0.0)
-
-            Wait(math.random(4000, 8000)) -- Random idle duration
-
-            if DoesEntityExist(ped) then
-                ClearPedTasks(ped)
-                local animDict = "creatures@cat@amb@"
-                local animName = "world_cat_sleeping_ground_idle"
-                loadAnimDict(animDict)
-                TaskPlayAnim(ped, animDict, animName, 8.0, -8.0, math.random(5000, 12000), 0, 0, false, false, false)
-            end
-        end
-    end)    ]]
     -- Individual wandering thread per cat
     CreateThread(function()
         while DoesEntityExist(ped) do
@@ -235,8 +212,6 @@ local function spawnCatAt(posIndex)
     end)
 end
 
-
-
 -- Cat spawner and despawner loop
 CreateThread(function()
     while true do
@@ -260,16 +235,6 @@ CreateThread(function()
         end
     end
 end)
-
-
-
-
-
-
-
-
-
-
 
     Citizen.CreateThread(function()
         while ESX == nil do
